@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação — Meu Projeto de Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">🏠 Meu Projeto de <span>Casa</span></a>
+    </div>
+  </header>
+
+  <section class="section" style="min-height:70vh;display:flex;align-items:center;">
+    <div class="container text-center" id="content">
+      <p>Carregando...</p>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var status = params.get('status') || 'pending';
+      var id = params.get('id') || localStorage.getItem('mpc_projectId');
+      var content = document.getElementById('content');
+
+      if (status === 'approved') {
+        content.innerHTML =
+          '<div style="font-size:3rem;margin-bottom:16px;">✅</div>' +
+          '<h1 style="margin-bottom:12px;">Pagamento aprovado. Seu projeto está liberado!</h1>' +
+          '<p style="color:var(--text-muted);margin-bottom:28px;">Código do pedido: <strong>' + id + '</strong></p>' +
+          '<a href="/projeto.html?id=' + id + '" class="btn btn-primary btn-lg">Acessar meu projeto</a>';
+      } else {
+        content.innerHTML =
+          '<div style="font-size:3rem;margin-bottom:16px;">⏳</div>' +
+          '<h1 style="margin-bottom:12px;">Estamos aguardando a confirmação do pagamento</h1>' +
+          '<p style="color:var(--text-muted);margin-bottom:8px;">Status: <strong>Pendente</strong></p>' +
+          '<p style="color:var(--text-muted);margin-bottom:24px;">Código: <strong>' + id + '</strong></p>' +
+          '<p style="font-size:0.95rem;max-width:400px;margin:0 auto 24px;">Se você pagou via PIX, a confirmação costuma ocorrer em poucos minutos. Atualize esta página ou use o botão abaixo.</p>' +
+          '<button class="btn btn-outline" onclick="location.reload()">Atualizar status</button> ' +
+          '<a href="/projeto.html?id=' + id + '" class="btn btn-primary" style="margin-left:8px;">Tentar acessar</a>';
+      }
+    })();
+  </script>
+</body>
+</html>

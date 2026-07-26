@@ -1,0 +1,29 @@
+{
+  "name": "meu-projeto-de-casa",
+  "version": "1.0.0",
+  "description": "Aplicação web para venda de projetos residenciais personalizados gerados com IA",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": ["arquitetura", "projeto-residencial", "ia", "casa"],
+  "author": "Meu Projeto de Casa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0",
+    "openai": "^4.67.0",
+    "pdfkit": "^0.15.0",
+    "multer": "^1.4.5-lts.1",
+    "body-parser": "^1.20.3",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "cookie-parser": "^1.4.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

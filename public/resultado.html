@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu projeto personalizado — Meu Projeto de Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">🏠 Meu Projeto de <span>Casa</span></a>
+    </div>
+  </header>
+
+  <section class="preview-hero">
+    <div class="container">
+      <span class="badge">Projeto gerado com sucesso</span>
+      <h1>Seu projeto personalizado está pronto</h1>
+      <p style="color:var(--text-muted);max-width:520px;margin:0 auto;">Criamos uma proposta inicial com base nas características da casa que você deseja.</p>
+      <div class="preview-meta" id="meta"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="planta-panel locked" id="plantaPanel">
+        <div class="watermark">PRÉVIA · MEU PROJETO DE CASA</div>
+        <div id="svgContainer" style="min-height:300px;text-align:center;">
+          <p style="padding:40px;color:var(--text-muted);">Carregando planta...</p>
+        </div>
+      </div>
+
+      <div id="explanations" style="margin:24px 0;"></div>
+
+      <div class="offer-section" id="oferta">
+        <h2 style="text-align:center;font-size:1.6rem;margin-bottom:8px;">Desbloqueie o projeto completo da sua casa</h2>
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:24px;">Receba todos os arquivos organizados para planejamento, orçamento e análise de um engenheiro ou arquiteto.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+          <div>
+            <h3 style="margin-bottom:12px;">Projeto arquitetônico</h3>
+            <ul class="offer-list">
+              <li>Planta baixa cotada</li>
+              <li>Planta humanizada</li>
+              <li>Implantação no terreno</li>
+              <li>Planta de cobertura</li>
+              <li>Fachadas</li>
+              <li>Cortes</li>
+              <li>Quadro de áreas</li>
+              <li>Portas e janelas</li>
+            </ul>
+            <h3 style="margin:20px 0 12px;">Instalações preliminares</h3>
+            <ul class="offer-list">
+              <li>Distribuição elétrica</li>
+              <li>Pontos de tomada e iluminação</li>
+              <li>Distribuição hidráulica</li>
+              <li>Água, esgoto e ralos</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">Apresentação visual</h3>
+            <ul class="offer-list">
+              <li>Fachada conceitual</li>
+              <li>Planta mobiliada</li>
+              <li>Imagens em 3D</li>
+              <li>Vista frontal e aérea</li>
+            </ul>
+            <h3 style="margin:20px 0 12px;">Documentação</h3>
+            <ul class="offer-list">
+              <li>Memorial descritivo preliminar</li>
+              <li>Estimativa de materiais</li>
+              <li>Cronograma orientativo</li>
+              <li>PDF completo organizado</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-old">De R$ 197,00</div>
+          <div class="price-new">R$ 47,90</div>
+          <p class="price-note">Pagamento único. Acesso imediato após a confirmação.</p>
+          <a href="/checkout.html" class="btn btn-primary btn-lg btn-block" style="margin-top:20px;" id="btnCheckout">Liberar meu projeto completo</a>
+          <div class="trust-badges">
+            <span>🔒 Compra segura</span>
+            <span>✓ Garantia de 7 dias</span>
+            <span>💳 PIX e cartão</span>
+            <span>⚡ Acesso imediato</span>
+          </div>
+        </div>
+
+        <div class="warning-box" style="margin-top:24px;">
+          Este material possui caráter preliminar e foi desenvolvido para planejamento, visualização e preparação do projeto residencial. Antes da execução da obra, compra de materiais, solicitação de alvará ou aprovação municipal, o conteúdo deve ser analisado, adaptado e aprovado por engenheiro ou arquiteto legalmente habilitado, responsável pela emissão da ART ou RRT correspondente.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>Projeto preliminar sujeito à análise e responsabilidade técnica de profissional habilitado.</p>
+      <p style="margin-top:8px;">© 2026 Meu Projeto de Casa</p>
+    </div>
+  </footer>
+
+  <script src="/js/resultado.js"></script>
+</body>
+</html>

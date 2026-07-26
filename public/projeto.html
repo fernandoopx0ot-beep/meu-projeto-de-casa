@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do cliente — Meu Projeto de Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">🏠 Meu Projeto de <span>Casa</span></a>
+      <span id="clientName" style="font-size:0.9rem;color:var(--text-muted);"></span>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div id="locked" class="hidden text-center" style="padding:60px 20px;">
+        <h2>Acesso ainda não liberado</h2>
+        <p style="color:var(--text-muted);margin:16px 0;">Aguarde a confirmação do pagamento ou entre em contato.</p>
+        <a href="/obrigado.html" class="btn btn-outline">Ver status do pagamento</a>
+      </div>
+
+      <div id="content" class="hidden">
+        <h1 style="margin-bottom:8px;">Seu projeto</h1>
+        <p style="color:var(--text-muted);margin-bottom:24px;" id="projInfo"></p>
+
+        <div class="preview-meta" id="meta" style="justify-content:flex-start;"></div>
+
+        <div class="planta-panel" style="margin:28px 0;">
+          <div id="svgFull" style="min-height:280px;">Carregando planta...</div>
+        </div>
+
+        <h2 style="margin:32px 0 16px;">Arquivos disponíveis</h2>
+        <div class="files-grid" id="files"></div>
+
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-top:40px;">
+          <h3 style="margin-bottom:12px;">Próxima etapa recomendada</h3>
+          <p style="color:var(--text-muted);margin-bottom:16px;">Apresente estes materiais a um engenheiro ou arquiteto habilitado para análise das características reais do terreno, regras municipais, estrutura, instalações e emissão da responsabilidade técnica.</p>
+          <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20solicitar%20revisão%20profissional%20do%20projeto" target="_blank" class="btn btn-primary">Solicitar revisão profissional</a>
+        </div>
+
+        <div class="warning-box" style="margin-top:24px;">
+          Este material possui caráter preliminar. Antes da execução da obra ou aprovação municipal, deve ser analisado, adaptado e aprovado por engenheiro ou arquiteto legalmente habilitado (ART ou RRT).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/projeto.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Meu Projeto de Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">🏠 Meu Projeto de <span>Casa</span></a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 style="text-align:center;margin-bottom:8px;">Finalizar compra</h1>
+      <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;">Pagamento seguro · Acesso imediato após confirmação</p>
+
+      <div class="checkout-grid">
+        <div class="checkout-summary">
+          <h3 style="margin-bottom:16px;">Resumo do pedido</h3>
+          <div id="summaryContent">
+            <p style="color:var(--text-muted);">Carregando...</p>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+            <div style="display:flex;justify-content:space-between;font-size:1.2rem;font-weight:700;">
+              <span>Total</span>
+              <span style="color:var(--primary);">R$ 47,90</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-form">
+          <h3 style="margin-bottom:16px;">Dados e pagamento</h3>
+          <div class="input-group"><label>Nome</label><input type="text" id="cName" readonly></div>
+          <div class="input-group"><label>E-mail</label><input type="email" id="cEmail" readonly></div>
+          <div class="input-group"><label>WhatsApp</label><input type="tel" id="cPhone" readonly></div>
+          <div class="input-group"><label>CPF</label><input type="text" id="cCpf" placeholder="000.000.000-00"></div>
+
+          <div style="margin:20px 0;">
+            <label style="font-weight:600;margin-bottom:10px;display:block;">Forma de pagamento</label>
+            <button type="button" class="option selected" id="payPix" style="margin-bottom:8px;">
+              <span class="option-check">✓</span> PIX (aprovação rápida)
+            </button>
+            <button type="button" class="option" id="payCard">
+              <span class="option-check"></span> Cartão de crédito
+            </button>
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" id="btnPay">Pagar R$ 47,90</button>
+
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:16px;text-align:center;">
+            Em modo de desenvolvimento, o pagamento é simulado e aprovado automaticamente.
+          </p>
+
+          <div class="warning-box" style="margin-top:20px;font-size:0.85rem;">
+            Material preliminar. Antes da obra ou aprovação municipal, necessita análise e responsabilidade técnica de profissional habilitado (ART/RRT).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
